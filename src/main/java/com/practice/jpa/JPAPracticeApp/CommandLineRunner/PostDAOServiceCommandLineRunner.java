@@ -19,6 +19,8 @@ public class PostDAOServiceCommandLineRunner implements CommandLineRunner {
 	
 	@Override
 	public void run(String... args) throws Exception {
+
+		// One to Many Mapping Example
 		Post post = new Post("Hibernate relationship mapping");
 		
 		PostComment comment1 = new PostComment("Can you explain Many to Many relationship with more examples.");
