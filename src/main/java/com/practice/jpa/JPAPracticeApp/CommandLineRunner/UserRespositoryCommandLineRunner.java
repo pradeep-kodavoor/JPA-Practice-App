@@ -1,4 +1,4 @@
-package com.practice.jpa.JPAPracticeApp;
+package com.practice.jpa.JPAPracticeApp.CommandLineRunner;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -21,9 +21,11 @@ public class UserRespositoryCommandLineRunner implements CommandLineRunner {
 	public void run(String... args) throws Exception {
 		User user = new User("Jagath", "Associate");
 		userRepository.save(user);
+
 		logger.info("User created with Respository: " + user);
 		logger.info("All Users: " + userRepository.findAll());
 		logger.info("User with ID:1 " + userRepository.findById(1L));
+
 	}
 
 }

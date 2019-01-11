@@ -15,7 +15,7 @@ public class UserDAOService {
 	@Autowired
 	private EntityManager entityManager;
 
-	public long insert(User user) {
+	public long insertUser(User user) {
 
 		entityManager.persist(user);
 		return user.getId();

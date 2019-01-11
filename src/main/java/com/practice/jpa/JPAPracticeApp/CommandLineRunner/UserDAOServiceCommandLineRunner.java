@@ -1,4 +1,4 @@
-package com.practice.jpa.JPAPracticeApp;
+package com.practice.jpa.JPAPracticeApp.CommandLineRunner;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -20,9 +20,8 @@ public class UserDAOServiceCommandLineRunner implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		User user = new User("Pradeep", "Associate");
-		long id = userDAOService.insert(user);
+		long id = userDAOService.insertUser(user);
 		logger.info("User created with Service: " + user);
-
+		
 	}
-
 }
