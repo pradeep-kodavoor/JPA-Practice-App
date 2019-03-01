@@ -18,8 +18,10 @@ public class Student {
 	private String name;
 
 
-	@OneToOne(mappedBy = "student", cascade = CascadeType.ALL)
-	@JoinColumn(name = "ADDRESS_ID")
+	//@OneToOne(mappedBy = "student", cascade = CascadeType.ALL)
+	//@JoinColumn(name = "ADDRESS_ID")
+	
+	@OneToOne
 	private Address address;
 
 	public Student() {

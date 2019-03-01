@@ -1,30 +1,25 @@
 package com.practice.jpa.JPAPracticeApp.entity;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.OneToOne;
-import javax.persistence.PrimaryKeyJoinColumn;
-
-import org.hibernate.annotations.GenericGenerator;
-import org.hibernate.annotations.Parameter;
 
 @Entity
 public class Address {
 
 	@Id
-	@Column(name = "ADDRESS_ID")
-	@GeneratedValue(generator = "gen")
-	@GenericGenerator(name = "gen", strategy = "foreign", parameters = @Parameter(name = "property", value = "student"))
+	//@Column(name = "ADDRESS_ID")
+	//@GeneratedValue(generator = "gen")
+	//@GenericGenerator(name = "gen", strategy = "foreign", parameters = @Parameter(name = "property", value = "student"))
+	@GeneratedValue
 	private Long id;
 	private String street;
 	private String city;
 	private String country;
 
-	@OneToOne
-	@PrimaryKeyJoinColumn
-	private Student student;
+	//@OneToOne
+	//@PrimaryKeyJoinColumn
+	//private Student student;
 
 	public Address() {
 		super();
@@ -53,9 +48,9 @@ public class Address {
 		return street;
 	}
 
-	public Student getStudent() {
-		return student;
-	}
+	//public Student getStudent() {
+		//return student;
+	//}
 
 	public void setCity(String city) {
 		this.city = city;
@@ -73,9 +68,9 @@ public class Address {
 		this.street = street;
 	}
 
-	public void setStudent(Student student) {
-		this.student = student;
-	}
+	//public void setStudent(Student student) {
+		//this.student = student;
+	//}
 
 	@Override
 	public String toString() {
