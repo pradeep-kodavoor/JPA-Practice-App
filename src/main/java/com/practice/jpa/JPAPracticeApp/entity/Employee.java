@@ -9,11 +9,20 @@ public class Employee {
 	@Id
 	private int empId;
 
+	private String name;
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
 	private int deptId;
 
 	private int salary;
 
-	private String name;
 
 	public int getEmpId() {
 		return empId;
@@ -39,17 +48,9 @@ public class Employee {
 		this.salary = salary;
 	}
 
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
 	@Override
 	public String toString() {
-		return "Employee [empId=" + empId + ", deptId=" + deptId + ", salary=" + salary + ", name=" + name + "]";
+		return "Employee [empId=" + empId + ", deptId=" + deptId + ", salary=" + salary + "]";
 	}
 
 }

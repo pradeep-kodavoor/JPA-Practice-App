@@ -1,5 +1,6 @@
 package com.practice.jpa.JPAPracticeApp.entity;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -11,6 +12,7 @@ public class User {
 	@GeneratedValue
 	private long id;
 
+	@Column(length = 6)
 	private String name;
 
 	private String role;

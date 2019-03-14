@@ -19,14 +19,14 @@ public class StudentDAOServiceCommanLineRunner implements CommandLineRunner {
 
 		// One to One Unidirectional Mapping Example
 
-		Student sherlock = new Student("Sherlock");
+		/*Student sherlock = new Student("Sherlock");
 		Address addressOfSherlock = new Address("Baker", "London", "UK");
 
 		studentDAOService.insertAddress(addressOfSherlock);
 
 		sherlock.setAddress(addressOfSherlock);
 
-		studentDAOService.insertStudent(sherlock);
+		studentDAOService.insertStudent(sherlock);*/
 
 		// One to One Bi-Directional Mapping
 		/*Student sherlock = new Student("Sherlock");

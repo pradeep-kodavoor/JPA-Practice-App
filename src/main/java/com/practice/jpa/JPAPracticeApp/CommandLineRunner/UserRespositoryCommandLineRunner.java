@@ -19,10 +19,20 @@ public class UserRespositoryCommandLineRunner implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		User user = new User("Jagath", "Associate");
-		userRepository.save(user);
+		/*try {
+			User jagath = new User("Jagath", "Associate");
+			userRepository.save(jagath);
+			User marut = new User("Marut", "Senior Associate");
+			userRepository.save(marut);
+			User avinash = new User("Avinash", "Associate");
+			userRepository.save(avinash);
+			User nithin = new User("Nithin", "Associate");
+			userRepository.save(nithin);
+		} catch (RuntimeException e) {
+			logger.info("Exception Raised!!");
 
-		logger.info("User created with Respository: " + user);
+		}*/
+
 		logger.info("All Users: " + userRepository.findAll());
 		logger.info("User with ID:1 " + userRepository.findById(1L));
 

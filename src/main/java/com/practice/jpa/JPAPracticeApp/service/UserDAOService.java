@@ -1,9 +1,9 @@
 package com.practice.jpa.JPAPracticeApp.service;
 
 import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 import javax.transaction.Transactional;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.practice.jpa.JPAPracticeApp.entity.User;
@@ -12,7 +12,7 @@ import com.practice.jpa.JPAPracticeApp.entity.User;
 @Transactional
 public class UserDAOService {
 
-	@Autowired
+	@PersistenceContext
 	private EntityManager entityManager;
 
 	public long insertUser(User user) {
