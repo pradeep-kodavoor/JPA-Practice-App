@@ -1,26 +1,21 @@
 package com.practice.jpa.JPAPracticeApp.entity;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 
 @Entity
 public class PostComment {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name = "COMMENT_ID")
+	@GeneratedValue
 	private Long id;
 
 	private String comment;
 
-	@ManyToOne
+	/*@ManyToOne
 	@JoinColumn(name = "POST_ID")
-	private Post post;
+	private Post post;*/
 
 	public PostComment() {
 		super();

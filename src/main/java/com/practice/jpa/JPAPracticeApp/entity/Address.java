@@ -17,9 +17,10 @@ public class Address {
 	private String city;
 	private String country;
 
-	//@OneToOne
+/*	@OneToOne
 	//@PrimaryKeyJoinColumn
-	//private Student student;
+	@MapsId
+	private Student student;*/
 
 	public Address() {
 		super();
@@ -48,10 +49,10 @@ public class Address {
 		return street;
 	}
 
-	//public Student getStudent() {
-		//return student;
-	//}
-
+/*	public Student getStudent() {
+		return student;
+	}
+*/
 	public void setCity(String city) {
 		this.city = city;
 	}
@@ -68,9 +69,9 @@ public class Address {
 		this.street = street;
 	}
 
-	//public void setStudent(Student student) {
-		//this.student = student;
-	//}
+/*	public void setStudent(Student student) {
+		this.student = student;
+	}*/
 
 	@Override
 	public String toString() {

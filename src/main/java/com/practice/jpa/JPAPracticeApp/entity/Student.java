@@ -1,6 +1,5 @@
 package com.practice.jpa.JPAPracticeApp.entity;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -22,6 +21,7 @@ public class Student {
 	//@JoinColumn(name = "ADDRESS_ID")
 	
 	@OneToOne
+	@JoinColumn(name = "ADDRESS_ID")
 	private Address address;
 
 	public Student() {
