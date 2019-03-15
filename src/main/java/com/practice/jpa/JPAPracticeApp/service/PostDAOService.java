@@ -21,6 +21,15 @@ public class PostDAOService {
 		entityManager.persist(post);
 	}
 
+	public void updatePost(Post post) {
+		System.out.println("Updating post..");
+		entityManager.find(Post.class, 1L);
+		PostComment comment = post.getComments().get(0);
+		post.removeComment(comment);
+		entityManager.merge(post);
+
+	}
+
 	public void insertPostComment(PostComment comment) {
 		System.out.println("Adding comment..");
 		entityManager.persist(comment);

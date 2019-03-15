@@ -3,6 +3,8 @@ package com.practice.jpa.JPAPracticeApp.entity;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class PostComment {
@@ -13,9 +15,18 @@ public class PostComment {
 
 	private String comment;
 
-	/*@ManyToOne
+	//One to many bidirectional mapping
+	@ManyToOne
 	@JoinColumn(name = "POST_ID")
-	private Post post;*/
+	private Post post;
+
+	public Post getPost() {
+		return post;
+	}
+
+	public void setPost(Post post) {
+		this.post = post;
+	}
 
 	public PostComment() {
 		super();
