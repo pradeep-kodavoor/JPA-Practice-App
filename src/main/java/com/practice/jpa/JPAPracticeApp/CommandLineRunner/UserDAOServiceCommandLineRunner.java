@@ -20,16 +20,12 @@ public class UserDAOServiceCommandLineRunner implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		try {
-			/*User user = new User("Prady", "Associate");
-			long id = userDAOService.insertUser(user);
+			User pradeep = new User("Pradeep", "Associate");
+			userDAOService.insertUser(pradeep);
 			User jagath = new User("Jagath", "Associate");
 			userDAOService.insertUser(jagath);
-			User marut = new User("Marut", "Senior Associate");
-			userDAOService.insertUser(marut);
-			User avinash = new User("Avinash", "Associate");
-			userDAOService.insertUser(avinash);
 			User nithin = new User("Nithin", "Associate");
-			userDAOService.insertUser(nithin);*/
+			userDAOService.insertUser(nithin);
 		} catch (RuntimeException e) {
 			logger.info("Exception Raised!!");
 
